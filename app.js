@@ -138,9 +138,6 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-const port = process.env.PORT || 3000;
-const server = http.createServer(app);
-
-server.listen(port, function() {
-  console.log("Server started on port ${port}");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("server is running on port 3000");
 });
